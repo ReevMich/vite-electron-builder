@@ -1,4 +1,7 @@
+const daisyUI = require('daisyui');
+
 module.exports = {
+  dark: false,
   theme: {
     extend: {
       colors: {
@@ -79,4 +82,28 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
   },
+  daisyui: {
+    styled: true,
+    themes: [
+      {
+        light: {
+          ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+          primary: '#042E69',
+          'primary-focus': '#365887',
+          secondary: '#205EC6',
+          accent: '#25A88A',
+          neutral: '#EAEAEB',
+          'base-100': '#FFFFFF',
+          info: '#205EC6',
+          success: '#25A88A',
+          warning: '#D38654',
+          error: '#D2423C',
+        },
+      },
+    ],
+    base: true,
+    utils: true,
+  },
+
+  plugins: [daisyUI],
 };
